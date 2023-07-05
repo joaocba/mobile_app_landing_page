@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+
+    <title>OneShop SA - Contacto</title>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="container navbar">
+    <!-- LOGO -->
+    <div id="logo"><a href="index.html"><img src="assets/img/logo_2.png" alt=""></a></div>
+    <!-- MENU -->
+    <ul class="nav-links">
+      <input type="checkbox" id="checkbox_toggle" />
+      <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+      <div class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index.html#funcionalidades">Funcionalidades</a></li>
+        <li><a href="index.html#planos">Planos</a></li>
+        <li><a href="index.html#sobre">Sobre</a></li>
+        <li><a href="contacto.html">Contactos</a></li>
+      </div>
+    </ul>
+  </nav>
+
+  <!-- BANNER -->
+  <section class="container banner-outros-bg">
+  </section>
+
+  <!-- CONTACTO FORM -->
+  <section class="container contacto-bg">
+    <div class="planos-titulo">
+      <h2 class="h2-titulo">Contacte-nos</h2>
+      <p>Tem alguma questão/dúvida que necessita de esclarecer?<br>Entre em contacto connosco por telefone ou preencha o formulário abaixo.</p>
+    </div>
+
+    <div class="form-div">
+      <div class="contacto-form">
+        <form>
+        <fieldset>
+        <legend><span class="number">1</span> Dados Pessoais</legend>
+        <input type="text" name="field1" placeholder="Nome *">
+        <input type="email" name="field2" placeholder="Email *">
+        <input type="number" name="field3" placeholder="Telefone *">
+        </fieldset>
+        <fieldset>
+        <legend><span class="number">2</span> Mensagem</legend>
+        <label for="assunto">Assunto:</label>
+        <select id="assunto" name="field4">
+        <optgroup label="Escolha o assunto">
+          <option value="Suporte tecnico">Suporte tecnico</option>
+          <option value="Outro">Outro</option>
+        </optgroup>
+        </select>   
+        <textarea name="field5" placeholder="Mensagem" rows="10"></textarea>
+        </fieldset>
+        <input type="submit" value="Submeter" />
+        </form>
+        </div>
+    </div>
+  </section>
+
+  <!-- RODAPE -->
+  <section class="container footer-bg">
+    <div class="col_container">
+      <div class="coluna col-1 footer-desc">
+        <h3 class="h3-titulo">Sobre</h3>
+        <p>ONESHOP-Distribuição Automóvel, S.A.<br>
+          Responsável pela importação da Ford Trucks para Portugal. Integra também nas suas instalações uma concessão da Volkswagen Veículos Comerciais e duas concessões Mazda.</p>
+        <img src="assets/img/logo_2.png" alt="">
+      </div>
+      <div class="coluna col-2 footer-desc">
+        <h3 class="h3-titulo"><i class="fa-solid fa-location-arrow"></i> Morada</h3>
+        <p>Edifício Oneshop, E.N.10, km 127, 2615-701 Alverca do Ribatejo</p>
+        <h3 class="h3-titulo"><i class="fa-solid fa-phone"></i> Tel.</h3>
+        <p>(+351) 215 998 935</p>
+        <h3 class="h3-titulo"><i class="fa-solid fa-envelope"></i> Email</h3>
+        <p>geral@oneshop.pt</p>
+      </div>
+      <div class="coluna col-3 footer-desc">
+        <h3 class="h3-titulo footer-newsletter-titulo">Subscrever Newsletter</h3>
+        <form action="">
+          <div class="footer-newsletter">
+            <input type="email" class="form-control" placeholder="Insira o seu Email">
+            <button type="submit" class="btn-newsletter"><i class="fa-solid fa-check"></i></button>
+          </div>
+        </form>
+        <h3 class="h3-titulo footer-redes-sociais-titulo">Redes Sociais</h3>
+        <div class="footer-redes-sociais">
+          <a href="#"><i class="fa-brands fa-facebook-square"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter-square"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+   </div>
+  </section>
+
+  <footer class="container fim-footer-bg">
+   <div class="fim-footer-txt">
+      <p>Trabalho de Ferramentas Multimedia desenvolvido por Joao Bacalhau & Daniel Pereira - TPSI, ISLA 2022</p>
+   </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,1035 @@
+
+/*  ##############################
+    ######### CSS GERAL ##########
+    ############################## */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Roboto;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+/* INCORPORA O CONTEUDO DENTRO DE MARGENS LATERAIS */
+.container>* {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+@media (max-width: 1199px) {
+	.container>* {
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+}
+
+@media (max-width: 768px) {
+	.container>* {
+		max-width: 700px;
+		margin: 0 20px;
+	}
+}
+
+/* FORMATACAO DE GRELHA COLUNAS */
+.col_container {
+	display: flex;
+}
+
+@media (max-width: 768px) {
+	.col_container {
+		display: inline-block;
+	}
+}
+
+.coluna {
+	flex: 1;
+}
+
+.col-1 {
+	order: 1;
+}
+
+.col-2 {
+	order: 2;
+}
+
+.col-3 {
+	order: 3;
+}
+
+.col-4 {
+	order: 4;
+}
+
+.col-5 {
+	order: 5;
+}
+
+
+
+/*  ##############################
+    ########### NAVBAR ###########
+    ############################## */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+    background-color: #007cbf;
+    color: #fff;
+	box-shadow: 0 5px 5px -6px black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.nav-links a {
+    color: #fff;
+}
+
+/* LOGO */
+#logo img {
+    width: 150px;
+}
+
+/* MENU */
+.menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+}
+
+.menu li:hover {
+    background-color: #64b0da;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.menu li {
+    padding: 10px 14px;
+}
+
+/* NAVBAR RESPONSIVA */
+input[type=checkbox]{
+    display: none;
+}
+
+/* MENU HAMBURGER */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+}
+
+/* MENU MEDIA QUERIES */
+@media (max-width: 768px) {
+    .menu {
+        display:none;
+        position: absolute;
+        background-color:#004d7c;
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+        margin-top: 15px;
+    }
+
+    .menu li:hover {
+        display: inline-block;
+        background-color:#007cbf;
+        transition: 0.3s ease;
+    }
+
+    .menu li + li {
+        margin-top: 12px;
+    }
+
+    input[type=checkbox]:checked ~ .menu{
+        display: block;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+
+
+
+/*  ##################################
+    ########### INDEX.HTML ###########
+    ################################## */
+
+/*  ##############################
+    ########### BANNER ###########
+    ############################## */
+
+.banner-bg{
+    background: url(../img/banner-bg-white.jpg) no-repeat scroll center center;
+    background-size: cover;
+    padding-top: 100px;
+    padding-bottom: 30px;
+    width:100%;
+    display: flex;
+    align-items: center;
+}
+
+.banner-txt {
+    margin-left: 18%;
+    max-width: 400px;
+}
+
+.banner-txt-titulo {
+    color:#000;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.banner-txt-desc {
+    color:#000;
+    font-size: 1em;
+    padding-top: 15px;
+    text-align: justify;
+}
+
+/* BOTOES APP */
+.banner-btn {
+    padding-top: 15px;
+}
+
+.btn{
+    padding:10px 16px;
+    margin:5px;
+    font-size:18px;
+    line-height:1.3333333;
+    border-radius:6px;
+    text-align:left;
+    white-space:nowrap;
+    vertical-align:middle;
+    -ms-touch-action:manipulation;
+    touch-action:manipulation;
+    cursor:pointer;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    border:1px solid transparent;
+    font-weight:500;
+    text-decoration:none;
+    display:inline-block;
+    width: 160px;
+}
+
+.btn:active:focus,.btn:focus{
+    outline:0
+}
+
+.btn:focus,.btn:hover{
+    color:#333;
+    text-decoration:none;
+    outline:0;
+}
+
+.btn:active{
+    outline:0;
+    -webkit-box-shadow:inset 0 3px 5px rgba(0,0,0,.125);
+    box-shadow:inset 0 3px 5px rgba(0,0,0,.125);
+}
+
+.btn-google{
+    color:#fff;
+    background-color:rgba(17, 17, 17, 0.897);
+    border-color:#000;
+    padding:15px 16px 5px 40px;
+    position:relative;
+    font-weight:600;
+}
+
+.btn-google:focus{
+    color:#fff;
+    background-color:#555;
+    border-color:#000;
+}
+
+.btn-google:active,.btn-google:hover{
+    color:#fff;
+    background-color:#555;
+    border-color:#000;
+}
+
+.btn-google:before{
+    content:"";
+    background-image:url(../img/googleplay_ico.png);
+    background-size:cover;
+    background-repeat:no-repeat;
+    width:30px;
+    height:30px;
+    position:absolute;
+    left:6px;
+    top:50%;
+    margin-top:-15px;
+}
+
+.btn-google:after{
+    content:"GET IT ON";
+    position:absolute;
+    top:5px;
+    left:40px;
+    font-size:10px;
+    font-weight:400;
+}
+
+.btn-appstore{
+    color:#fff;
+    background-color:rgba(17, 17, 17, 0.897);
+    border-color:#000;
+    padding:15px 16px 5px 40px;
+    position:relative;
+    font-weight:600;
+}
+
+ .btn-appstore:focus{
+    color:#fff;
+    background-color:#555;
+    border-color:#000;
+}
+
+ .btn-appstore:active,.btn-appstore:hover{
+    color:#fff;
+    background-color:#555;
+    border-color:#000;
+}
+
+.btn-appstore:before{
+    content:"";
+    background-image:url(../img/appstore_ico.png);
+    background-size:cover;
+    background-repeat:no-repeat;
+    width:30px;
+    height:30px;
+    position:absolute;
+    left:6px;
+    top:50%;
+    margin-top:-15px;
+}
+
+.btn-appstore:after{
+    content:"DOWNLOAD ON THE";
+    position:absolute;
+    top:5px;
+    left:40px;
+    font-size:10px;
+    font-weight:400;
+}
+/* FIM BOTOES APP */
+
+.banner-img {
+    margin-right: 18%;
+}
+
+.banner-img > img {
+    max-width: 450px;
+    min-width: 250px;
+}
+
+@media (max-width: 768px) {
+    .banner-bg {
+        padding-top: 150px;
+        display: inline-block;
+        text-align: center;
+    }
+
+    .banner-txt {
+        margin-left: 5%;
+    }
+
+    #banner-txt-desc {
+        color:#000;
+        font-size: 1em;
+        padding-top: 15px;
+    }
+
+    .banner-img {
+        margin-right: 5%;
+    }
+
+    .banner-img > img {
+        max-width: 350px;
+        min-width: 150px;
+    }
+}
+
+
+
+/*  ##############################
+    ###### FUNCIONALIDADES #######
+    ############################## */
+
+.servicos-bg {
+    background-color: #fff;
+    position: relative;
+    width:100%;
+    display: inline-block;
+    align-items: center;
+    padding-bottom: 100px;
+}
+
+.servicos-bg .col-1 {
+    margin-right: 20px;
+}
+
+.servicos-bg .col-3 {
+    margin-left: 20px;
+}
+
+.servicos-bg .coluna {
+    /* border:1px solid lightgrey; */
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.servicos-bg .coluna:hover {
+    background-color: #cee2ec;
+    transition: 0.3s ease;
+}
+
+.servicos-titulo {
+    text-align: center;
+    font-size: 20px;
+    padding: 70px 0;
+    color: #007cbf;
+}
+
+.servicos-icon {
+    margin: auto;
+    width: 50%;
+    font-size: 50px;
+    color: #007cbf;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+
+}
+
+.servicos-txt {
+    text-align: justify;
+    font-size: 1em;
+    padding: 0 30px;
+    padding-bottom: 20px;
+}
+
+.servicos-txt > h3 {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .servicos-bg .col-1 {
+        margin: 20px 0;
+    }
+
+    .servicos-bg .col-3 {
+        margin: 20px 0;
+    }
+}
+
+
+
+/*  ##############################
+    ########## APP INFO ##########
+    ############################## */
+
+.app-info-bg{
+    background-color: #f5f5f5;
+    position: relative;
+    width:100%;
+    display: inline-block;
+    align-items: center;
+    padding: 80px 0;
+}
+
+.h2-titulo {
+    padding-bottom: 2px;
+}
+
+#app-info-img {
+    max-width: 450px;
+    min-width: 150px;
+}
+
+.app-info-desc {
+    padding-top: 70px;
+}
+
+.app-info-desc > h2 {
+    padding-bottom: 10px;
+}
+
+.app-info-desc > p {
+    text-align: justify;
+    padding-bottom: 20px;
+}
+
+.app-info-lista > li {
+    list-style: inside;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    #app-info-img {
+        width: 360px;
+        padding-bottom: 20px;
+    }
+}
+
+
+
+
+/*  ##############################
+    ########## APP GPS ###########
+    ############################## */
+
+.app-gps-bg{
+    background-color: #fff;
+    position: relative;
+    width:100%;
+    display: inline-block;
+    align-items: center;
+    padding: 60px 0;
+}
+
+.h2-titulo {
+    padding-bottom: 2px;
+}
+
+.hr-titulo {
+    margin: auto;
+    width: 100px;
+    border: none;
+    height: 2px;
+    background-color: #007cbf;
+}
+
+#app-gps-img {
+    max-width: 420px;
+    min-width: 150px;
+}
+
+.app-gps-desc {
+    padding-top: 170px;
+}
+
+.app-gps-desc > h2 {
+    padding-bottom: 10px;
+}
+
+.app-gps-desc > p {
+    text-align: justify;
+    padding-bottom: 20px;
+}
+
+.app-gps-desc .legenda {
+    text-align: left;
+    font-size: 13px;
+    color: grey;
+}
+
+.app-gps-lista > li {
+    list-style: inside;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    #app-gps-img {
+        width: 380px;
+        padding-bottom: 20px;
+    }
+
+    .app-gps-desc {
+        padding-top: 50px;
+    }
+}
+
+
+
+/*  ##############################
+    ######## PLANOS SUBS #########
+    ############################## */
+
+.planos-bg {
+    background-color: #f5f5f5;
+    position: relative;
+    width:100%;
+    display: inline-block;
+    align-items: center;
+    padding-bottom: 100px;
+}
+
+.planos-bg .coluna {
+    /* border:1px solid lightgrey; */
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.planos-titulo {
+    text-align: center;
+    font-size: 20px;
+    padding: 70px 0;
+    color: #007cbf;
+}
+
+.planos-titulo > p {
+    padding-top: 10px;
+    font-size: 15px;
+    color: #000;
+    margin: 0 10%;
+}
+
+.planos-bg .col-1 {
+    margin-left: 15%;
+    margin-right: 2%;
+}
+
+.planos-bg .col-2 {
+    margin-right: 15%;
+    margin-left: 2%;
+}
+
+.planos-header {
+    border-bottom: 1px solid #e2e1e1;
+    padding: 30px 0;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.planos-header > h3 {
+    padding-bottom: 10px;
+}
+
+.planos-header > p {
+    font-size: 12px;
+}
+
+.planos-txt {
+    text-align: left;
+    font-size: 1em;
+    padding: 30px 25px;
+    min-height: 230px;
+    max-height: 400px;
+}
+
+.planos-txt > p {
+    padding-bottom: 15px;
+    margin: 0 5%;
+}
+
+.planos-txt > p > i {
+    color: #007cbf;
+    margin-right: 5px;
+}
+
+.planos-footer {
+    border-top: 1px solid #e2e1e1;
+    padding: 30px 0;
+    text-align: center;
+}
+
+/* BOTOES PLANOS */
+.planos-btn {
+    align-items: center;
+    background-color: #0A66C2;
+    border: 0;
+    border-radius: 100px;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 20px;
+    max-width: 480px;
+    min-height: 40px;
+    min-width: 0px;
+    overflow: hidden;
+    padding: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    touch-action: manipulation;
+    transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+}
+
+.planos-btn:hover,
+.planos-btn:focus {
+    background-color: #16437E;
+    color: #ffffff;
+}
+
+.planos-btn:active {
+    background: #09223b;
+    color: rgb(255, 255, 255, .7);
+}
+
+.planos-btn:disabled {
+    cursor: not-allowed;
+    background: rgba(0, 0, 0, .08);
+    color: rgba(0, 0, 0, .3);
+}
+/* FIM BOTOES PLANOS */
+
+@media (max-width: 768px) {
+    .planos-header {
+        padding: 30px 150px;
+    }
+
+    .planos-bg .col-1 {
+        margin: auto;
+        margin-bottom: 50px;
+    }
+
+    .planos-bg .col-2 {
+        margin: auto;
+    }
+}
+
+
+
+/*  ##############################
+    ########### SOBRE ############
+    ############################## */
+
+.sobre-bg{
+    background-color: #fff;
+    position: relative;
+    width:100%;
+    display: inline-block;
+    align-items: center;
+    padding-bottom: 100px;
+}
+
+.sobre-titulo {
+    text-align: center;
+    font-size: 20px;
+    padding: 70px 0;
+    color: #007cbf;
+}
+
+.h2-titulo {
+    padding-bottom: 2px;
+}
+
+.hr-titulo {
+    margin: auto;
+    width: 100px;
+    border: none;
+    height: 2px;
+    background-color: #007cbf;
+}
+
+#sobre-img {
+    max-width: 450px;
+    min-width: 150px;
+}
+
+.sobre-desc > p {
+    text-align: justify;
+    padding-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    #sobre-img {
+        width: 380px;
+        padding-bottom: 20px;
+    }
+}
+
+
+
+/*  ##############################
+    ########### RODAPE ###########
+    ############################## */
+
+.footer-bg{
+    background-color: #222222;
+    position: relative;
+    width:100%;
+    display: inline-block;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.footer-bg .col-2 {
+    margin: 0 30px;
+}
+
+.h3-titulo {
+    padding-bottom: 5px;
+    color: #fff;
+    font-weight: 100;
+    font-size: 15px;
+}
+
+.footer-desc {
+    padding: 25px 0;
+}
+
+.footer-desc > img {
+    width: 100px;
+}
+
+.footer-desc > p {
+    text-align: justify;
+    color: #969696;
+    font-size: 13px;
+    padding-bottom: 20px;
+}
+
+.footer-newsletter {
+    display: inline-block;
+}
+
+.footer-newsletter-titulo {
+    padding-bottom: 10px;
+}
+
+.footer-redes-sociais-titulo {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.footer-redes-sociais a {
+    color: #f5f5f5;
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+.footer-redes-sociais i:hover {
+    color: #007cbf;
+}
+
+.form-control {
+    width: 80%;
+    height: 40px;
+    background-color: #1a1a1a;
+    border-color: #333333;
+    display: inline-block;
+    border: 1px solid #555;
+    box-shadow: inset 0 0px 0px rgba(0,0,0,.075);
+    padding: 6px 12px;
+    font-size: 14px;
+    color: #555;
+}
+
+.btn-newsletter {
+    width: 20%;
+    padding: 0.65rem 1.2rem;
+    background-color: #007cbf;
+    border-color: #007cbf;
+    color: #fff;
+    margin-left: -4px;
+}
+
+@media (max-width: 768px) {
+    .footer-bg .col-2 {
+        margin: 0;
+    }
+}
+
+
+
+/*  ##############################
+    ######## FIM RODAPE ##########
+    ############################## */
+
+.fim-footer-bg{
+    background-color: #1b1b1b;
+    width:100%;
+    padding: 30px 0;
+}
+
+.fim-footer-txt {
+    text-align: center;
+    color: #969696;
+}
+
+
+
+/*  ##################################
+    ######### CONTACTO.HTML ##########
+    ################################## */
+
+/*  ##############################
+    ########### BANNER ###########
+    ############################## */
+
+.banner-outros-bg{
+    background: url(../img/camioes2.jpg) fixed no-repeat center bottom;
+    background-size: cover;
+    filter: grayscale(50%);
+    padding-top: 300px;
+    padding-bottom: 30px;
+    width:100%;
+    display: flex;
+    align-items: center;
+    -webkit-filter: grayscale(50%);
+}
+
+
+
+/*  ##############################
+    ######### FORMULARIO #########
+    ############################## */
+
+.contacto-bg{
+    background-color: #fff;
+    position: relative;
+    width:100%;
+    display: inline-block;
+    align-items: center;
+    padding-bottom: 60px;
+}
+
+.h2-titulo {
+    padding-bottom: 2px;
+}
+
+.form-div > h2 {
+    padding-bottom: 10px;
+}
+
+.form-div > p {
+    text-align: justify;
+    padding-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .form-div {
+        padding-top: 50px;
+    }
+}
+
+/* CAIXA FORMULARIO */
+.contacto-form {
+	max-width: 700px;
+	padding: 10px 20px;
+	background: #f4f7f8;
+	margin: 10px auto;
+	padding: 20px;
+	background: #f4f7f8;
+	border-radius: 8px;
+}
+
+.contacto-form fieldset {
+	border: none;
+}
+
+.contacto-form legend {
+	font-size: 1.4em;
+	margin-bottom: 10px;
+}
+
+.contacto-form label {
+	display: block;
+	margin-bottom: 8px;
+}
+
+.contacto-form input[type="text"],
+.contacto-form input[type="email"],
+.contacto-form input[type="number"],
+.contacto-form textarea,
+.contacto-form select {
+	background: rgba(255,255,255,.1);
+	border: none;
+	border-radius: 4px;
+	font-size: 15px;
+	margin: 0;
+	outline: 0;
+	padding: 10px;
+	width: 100%;
+	box-sizing: border-box; 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box; 
+	background-color: #e8eeef;
+	color:#8a97a0;
+	-webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+	box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+	margin-bottom: 30px;
+}
+
+.contacto-form input[type="text"]:focus,
+.contacto-form input[type="email"]:focus,
+.contacto-form input[type="number"]:focus,
+.contacto-form textarea:focus,
+.contacto-form select:focus{
+	background: #d2d9dd;
+}
+
+.contacto-form select {
+	-webkit-appearance: menulist-button;
+	height:35px;
+}
+
+.contacto-form .number {
+	background: #0A66C2;
+	color: #fff;
+	height: 30px;
+	width: 30px;
+	display: inline-block;
+	font-size: 0.8em;
+	margin-right: 4px;
+	line-height: 30px;
+	text-align: center;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+	border-radius: 15px 15px 15px 0px;
+}
+
+.contacto-form input[type="submit"],
+.contacto-form input[type="button"] {
+	position: relative;
+	display: block;
+	padding: 19px 39px 18px 39px;
+	color: #FFF;
+	margin: 0 auto;
+	background: #0A66C2;
+	font-size: 18px;
+	text-align: center;
+	font-style: normal;
+	width: 100%;
+	border: 1px solid #16437E;
+	border-width: 1px 1px 3px;
+	margin-bottom: 10px;
+}
+
+.contacto-form input[type="submit"]:hover,
+.contacto-form input[type="button"]:hover {
+	background: #007cbf;
+}
+/* FIM CAIXA FORMULARIO */
